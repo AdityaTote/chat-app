@@ -1,0 +1,30 @@
+{
+    "name": "ws",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc -p . && tsc-alias",
+        "start": "node -r ./src/pathconfig.js dist/index.js",
+        "dev": "pnpm run build && pnpm run start"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.5.0",
+        "ioredis": "^5.6.1",
+        "jsonwebtoken": "^9.0.2",
+        "kafkajs": "^2.2.4",
+        "uuid": "^11.1.0",
+        "ws": "^8.18.1"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*",
+        "@repo/schema": "workspace:*",
+        "@types/jsonwebtoken": "^9.0.9",
+        "@types/ws": "^8.18.1",
+        "tsc-alias": "^1.8.16",
+        "tsconfig-paths": "^4.2.0"
+    }
+}

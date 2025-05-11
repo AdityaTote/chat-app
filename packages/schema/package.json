@@ -1,0 +1,32 @@
+{
+    "name": "@repo/schema",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@t3-oss/env-core": "^0.13.4",
+        "dotenv": "^16.5.0",
+        "zod": "^3.24.4"
+    },
+    "devDependencies": {
+        "@repo/typescript-config": "workspace:*"
+    },
+    "exports": {
+        "./jwt": {
+            "import": "./src/jwt.ts",
+            "require": "./src/jwt.js"
+        },
+        "./ws": {
+            "import": "./src/ws.ts",
+            "require": "./src/ws.js"
+        },
+        "./user": "./src/user.ts",
+        "./infered": "./src/infered.types.ts"
+    }
+}
