@@ -1,0 +1,16 @@
+FROM node:20-apline
+
+WORKDIR /app
+
+RUN npm install -g pnpm
+
+COPY package.json ./package.json
+COPY pnpm-lock.yml ./pnpm-lock.yml
+
+COPY . .
+
+RUN pnpm install
+
+EXPOSE 3000 8000 3030
+
+CMD ["pnpm", "dev:migrate"]

@@ -9,7 +9,8 @@
         "check-types": "turbo run check-types",
         "db:generate": "cd packages/db && npx drizzle-kit generate",
         "db:migrate": "cd packages/db && npx drizzle-kit migrate",
-        "db:studio": "cd packages/db && npx drizzle-kit studio"
+        "db:studio": "cd packages/db && npx drizzle-kit studio",
+        "dev:migrate": "pnpm db:migrate && pnpm dev"
     },
     "devDependencies": {
         "prettier": "^3.5.3",
